@@ -76,7 +76,10 @@ class Home extends Component {
                 data={this.state.data}
                 renderItem={({item,index})=>(
                     <TouchableOpacity style={{marginHorizontal:20,marginVertical:10,backgroundColor:'#2196f3',padding:8,borderRadius:5,elevation:3}}
-                    onPress={() => this.props.navigation.navigate('Detail')}
+                    onPress={() => this.props.navigation.navigate('Detail',{
+                        'judul'     : item.judul,
+                        'deskripsi' : item.deskripsi
+                    })}
                     >
                         <Text style={{color:'#ffffff'}}>
                             {item.judul}
