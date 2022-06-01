@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {View,Text,StatusBar,FlatList,TouchableOpacity,TextInput} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class Home extends Component {
     constructor(props) {
@@ -121,10 +122,23 @@ class Home extends Component {
         return (
             <View style={{flex:1,backgroundColor:'#212121'}}>
                 <StatusBar backgroundColor="#1976d2"/>
-                <View style={{backgroundColor:'#2196f3',paddingVertical:15,elevation:3}}>
+                <View style={{
+                    backgroundColor:'#2196f3',
+                    paddingVertical:15,
+                    elevation:3,
+                    flexDirection:'row',
+                    paddingHorizontal:20,
+                    alignItems: 'center'
+                    }}>
+                    <View style={{flex:1}}>
                     <Text
                         style={{color:'#ffffff',textAlign:'center',alignItems:'center',fontWeight:'bold',fontSize:18}}
-                    >Home</Text>
+                    >Home
+                    </Text>
+                    </View>
+                    <TouchableOpacity onPress={()=> this.props.navigation.navigate('About')}>
+                        <Icon style={{marginRight:10}} name="question-circle" size={25} color="#ffffff" />
+                    </TouchableOpacity>
                 </View>
                 <TextInput 
                     value={this.state.pencarian}
@@ -135,7 +149,7 @@ class Home extends Component {
                 data={this.state.dataTampil}
                 renderItem={({item,index})=>(
                     <TouchableOpacity style={{marginHorizontal:20,marginVertical:10,backgroundColor:'#2196f3',padding:8,borderRadius:5,elevation:3}}
-                    onPress={() => this.props.navigation.navigate('Detail',{
+                    onPress={() => this.props.navigation.navigate('Show',{
                         'judul'     : item.judul,
                         'deskripsi' : item.deskripsi
                     })}

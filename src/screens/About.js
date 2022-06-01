@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {View,Text,StatusBar,TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-class Detail extends Component {
+class About extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -26,15 +26,16 @@ class Detail extends Component {
                     </TouchableOpacity>
                     <Text
                         style={{color:'#ffffff',textAlign:'center',alignItems:'center',fontWeight:'bold',fontSize:18}}
-                    >Detail</Text>
+                    >About</Text>
                 </View>
-                <View style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
-                    <Text style={{color:'#ffff'}}>{this.props.route.params.judul}</Text>
-                    <Text style={{color:'#ffff'}}>{this.props.route.params.deskripsi}</Text>
+                <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                    <Text style={{color:'#ffffff'}}>
+                        This Aplication developed by Triangga.
+                    </Text>
                 </View>
             </View>
         );
     }
 }
 
-export default Detail;
+export default About;
