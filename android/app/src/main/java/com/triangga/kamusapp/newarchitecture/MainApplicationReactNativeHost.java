@@ -1,4 +1,4 @@
-package com.kamusapp.newarchitecture;
+package com.triangga.kamusapp.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.kamusapp.BuildConfig;
-import com.kamusapp.newarchitecture.components.MainComponentsRegistry;
-import com.kamusapp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.triangga.kamusapp.BuildConfig;
+import com.triangga.kamusapp.newarchitecture.components.MainComponentsRegistry;
+import com.triangga.kamusapp.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

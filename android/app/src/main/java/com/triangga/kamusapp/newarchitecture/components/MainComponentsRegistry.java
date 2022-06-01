@@ -1,4 +1,4 @@
-package com.kamusapp.newarchitecture.components;
+package com.triangga.kamusapp.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

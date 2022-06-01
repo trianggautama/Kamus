@@ -1,4 +1,4 @@
-package com.kamusapp.newarchitecture.modules;
+package com.triangga.kamusapp.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

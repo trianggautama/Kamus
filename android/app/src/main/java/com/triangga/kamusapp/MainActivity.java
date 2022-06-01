@@ -1,4 +1,4 @@
-package com.kamusapp;
+package com.triangga.kamusapp;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
