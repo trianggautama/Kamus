@@ -55,9 +55,68 @@ class Home extends Component {
                     deskripsi : 'Manggis adalah buah'
                 },
             ],
+            'dataTampil' : [
+                {
+                    judul     :'apel',
+                    deskripsi : 'apel adalah buah'
+                },
+                {
+                    judul     :'jeruk',
+                    deskripsi : 'jeruk adalah buah'
+                },
+                {
+                    judul     :'pear',
+                    deskripsi : 'pear adalah buah'
+                },
+                {
+                    judul     :'Mangga',
+                    deskripsi : 'Mangga adalah buah'
+                },
+                {
+                    judul     :'Anggur',
+                    deskripsi : 'Anggur adalah buah'
+                },
+                {
+                    judul     :'Sirsak',
+                    deskripsi : 'Sirsak adalah buah'
+                },
+                {
+                    judul     :'Nangka',
+                    deskripsi : 'Nangka adalah buah'
+                },
+                {
+                    judul     :'Strawberry',
+                    deskripsi : 'Strawberry adalah buah'
+                },
+                {
+                    judul     :'Durian',
+                    deskripsi : 'Durian adalah buah'
+                },
+                {
+                    judul     :'Nanas',
+                    deskripsi : 'Nanas adalah buah'
+                },
+                {
+                    judul     :'Semangka',
+                    deskripsi : 'Semangka adalah buah'
+                },
+                {
+                    judul     :'Manggis',
+                    deskripsi : 'Manggis adalah buah'
+                },
+            ],
             'pencarian' : '',
          };
     }
+
+    pencarian = () => {
+        let data = this.state.data;
+
+        data = data.filter((item) => item.judul.toLowerCase().includes(this.state.pencarian.toLowerCase()));
+
+        this.setState({dataTampil:data});
+    }
+
     render() {
         return (
             <View style={{flex:1,backgroundColor:'#212121'}}>
@@ -69,11 +128,11 @@ class Home extends Component {
                 </View>
                 <TextInput 
                     value={this.state.pencarian}
-                    onChangeText={({text}) => this.setState({pencarian:text})}
+                    onChangeText={(text) => this.setState({pencarian:text}, () => this.pencarian())}
                     style={{backgroundColor:'#ffffff',marginHorizontal:20,marginTop:20,marginBottom:10,borderRadius:5}}
                 />
                 <FlatList
-                data={this.state.data}
+                data={this.state.dataTampil}
                 renderItem={({item,index})=>(
                     <TouchableOpacity style={{marginHorizontal:20,marginVertical:10,backgroundColor:'#2196f3',padding:8,borderRadius:5,elevation:3}}
                     onPress={() => this.props.navigation.navigate('Detail',{
